@@ -10,6 +10,12 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Tahoma', monospace;
+    
+}
+
+body {
+    background: #4666FF;
 }
 
 
@@ -26,7 +32,6 @@ li, a {
     justify-content: space-around;
     align-items: center;
     padding: 30px 10%;
-    background-color: black;
 }
 
 
@@ -40,11 +45,13 @@ li, a {
 }
 
 .nav_links li a {
+    color: white;
+    font-size: x-large;
     transition: all 0.3s ease 0s;
 }
 
 .nav_links a:hover {
-    color: blue;
+    color: black;
 }
 
 
@@ -56,6 +63,7 @@ li, a {
     text-align: center;
     display: block;
     font-size: 75px;
+    color: white;
 }
 
 .landingParent {
@@ -68,13 +76,12 @@ li, a {
 
 .projectParent {
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    padding: 30px 10%;
     margin: 5%;
     border-radius: 25px;
     background: aliceblue;
     padding: 20px; 
+    justify-content: space-between;
     
 }
 
@@ -85,23 +92,58 @@ li, a {
 .projectText {
     text-align: left;
     display: block;
-    font-size: 35px;
-    width: 35%;
-    height: 25%;
+    font-size: 30px;
+    width: 25vw;
+}
+
+.projectText a {
+    color: gray;
+    transition: all 0.3s ease 0s;
+}
+
+.projectText a:hover {
+    color: #4666FF;
 }
 
 .githubLink {
     color: black;
-    margin-left: 30px;
     border-radius: 25px;
     background: white;
-    padding: 20px;
+    padding: 1vw;
     transition: all 0.3s ease 0s;
 }
 
 .githubLink:hover {
     color: white;
-    background: black;
+    background: #4666FF;
+}
+
+.projectTools {
+    text-align: left;
+    display: block;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.projectImage {
+    display: flex;
+    float: left;
+    padding: 10px;
+    margin-right: 10vw;
+
+}
+
+img {
+    display: block;
+    height: 35vh;
+    width: auto;
+    transition: all 0.3s ease 0s;
+    margin-left: 1vw;
+    border-radius: 25px;
+}
+
+img:hover{
+    height: 50vh;
 }
 
 
