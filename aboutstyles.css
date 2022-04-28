@@ -74,15 +74,6 @@
     border-radius: 25px;
 }
 
-.cvDot {
-    height: 150px;
-    width: 150px;
-    background-color: white;
-    border-radius: 50%;
-    display: inline-block;
-    margin: 10px;
-}
-
 .cvText {
     display: flex;
     align-items: center;
@@ -123,4 +114,27 @@
 .downloadButton:hover {
     color: white;
     background: black;
+}
+
+.container{
+    width: 150px;
+    height: 150px;
+    position: relative;
+    margin: 10px;
+    border: 4px solid magenta;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cvDot{
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+}
+.stack-top{
+    z-index: 1;
+    height: 50%;
+    width: auto;
 }
