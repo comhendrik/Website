@@ -48,7 +48,7 @@
     color: #4666FF;
 }
 
-.githubLink {
+.toolLink {
     color: black;
     border-radius: 25px;
     background: white;
@@ -56,7 +56,7 @@
     transition: all 0.3s ease 0s;
 }
 
-.githubLink:hover {
+.toolLink:hover {
     color: white;
     background: #4666FF;
 }
