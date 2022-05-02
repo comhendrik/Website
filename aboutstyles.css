@@ -131,11 +131,3 @@
     width: auto;
 }
 
-.creditLink {
-    color: black;
-    transition: all 0.3s ease 0s;
-}
-
-.creditLink:hover {
-    color: gray;
-}
