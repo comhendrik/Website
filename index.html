@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="homestyles.css">
+    <link rel="stylesheet" href="indexstyles.css">
     <title>Document</title>
 </head>
 <body>
@@ -22,45 +22,28 @@
             <div class="landingText">A hobby programmer.</div>
         </div>
         <div class="landingChildren">
-            <span class="dot"></span>
+            <!-- Add a picture of yourself at this point with a square size. Example image from: https://unsplash.com/photos/WNoLnJo7tS8?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink-->
+            <img src="placeholderImage.jpg" alt="Profile image" class="dot">
         </div>
     </div>
     <p style="color: white; font-size: 45px; margin-left: 5%; margin-top: 75px;">Projects:</p>
-    <!-- The div from line 30 to 44 describes one of your projects. Add as many projects as you want. -->
+    <!-- The div from line 30 to 45 describes one of your projects. Add as many projects as you want. -->
     <div class="projectParent">
         <div class="projectChildren">
-            <div class="projectText"><p style="margin: 10px 10px 15px 0; text-align: left;">ShopApp:</p>E-commerce application for the iOS platform, developed in SwiftUI. You can create an account, add items to your favourites and buy them on account. The database is managed by Firebase. <a href="https://github.com/comhendrik/ShopApp">GitHub</a></div>
+            <!-- Add a description of your project and a link to a github page or any other repository to let others get in touch with your project.-->
+            <div class="projectText"><p style="margin: 10px 10px 15px 0; text-align: left;">Sample Project:</p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. <a href="https://github.com/testuser/testproject">GitHub</a></div>
             <div class="projectTools">
-                <a class="toolLink" href="https://firebase.google.com">Firebase</a>
+                <!-- As many tools as like with the example pattern below. Add link to let others get to know the tools you used.-->
                 <a class="toolLink" href="https://developer.apple.com/documentation/swiftui/">SwiftUI</a>
                 <a class="toolLink" href="https://www.swift.org">Swift</a>
             </div>
         </div>
+        <!-- Add some screenshots from your project to give a quick preview on your project-->
         <div class="projectImage">
-            <img src="shopappScreenshotArticle.png" alt="Screenshot from the shopapp project">
-            <img src="shopappScreenshotLogin.png" alt="Screenshot from the shopapp project">
-            <img src="shopappScreenshotPayment.png" alt="Screenshot from the shopapp project">
+            <img class="exampleImage" src="placeholderImageProjectOne.png" alt="Screenshot from the sample project">
+            <img class="exampleImage" src="placeholderImageProjectTwo.png" alt="Screenshot from the sample project">
         </div>
     </div>
     <!--End of one project Entry -->
-    <div class="projectParent">
-        <div class="projectChildren">
-            <div class="projectText"><p style="margin: 10px 10px 15px 0; text-align: left;">BlogApp:</p>Blog app, which can be accessed from a website and via an API from a Swift Application. You can create an account, read and write posts. The database is managed by Flask and sqlite3 in Python. <a href="https://github.com/comhendrik/blog_app">GitHub</a></div>
-            <div class="projectTools">
-                <a class="toolLink" href="https://palletsprojects.com/p/flask/">Flask</a>
-                <a class="toolLink" href="https://www.python.org">Python</a>
-                <a class="toolLink" href="https://developer.apple.com/documentation/swiftui/">SwiftUI</a>
-                <a class="toolLink" href="https://www.swift.org">Swift</a>
-                <a class="toolLink" href="http://www.google.com/search?q=HTML">HTML</a>
-                <a class="toolLink" href="http://www.google.com/search?q=CSS">CSS</a>
-                <a class="toolLink" href="https://www.sqlite.org/index.html">SQLite</a>
-            </div>
-        </div>
-        <div class="projectImage">
-            <img src="blogappScreenshotApp.png" alt="Screenshot from the shopapp project">
-            <img src="blogappScreenshotWebsite.png" alt="Screenshot from the shopapp project">
-            <img src="blogappScreenshotCreate.png" alt="Screenshot from the shopapp project">
-        </div>
-    </div>
 </body>
 </html>

@@ -76,7 +76,7 @@
 
 }
 
-img {
+.exampleImage {
     display: block;
     height: 35vh;
     width: auto;
@@ -85,6 +85,6 @@ img {
     border-radius: 25px;
 }
 
-img:hover{
+.exampleImage:hover{
     height: 50vh;
 }

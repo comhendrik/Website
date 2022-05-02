@@ -1,9 +1,7 @@
 .dot {
     height: 300px;
-    width: 300px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
+    width: auto;
+    border-radius: 25%;
 }
 
 * {
