@@ -14,3 +14,4 @@ Create your own portfolio website without having to design a website.<br/>
 
 Things to improve:<br/>
 1. Better resizing of content when you resize the window.
+2. Create compatibility with the mobile phone.
