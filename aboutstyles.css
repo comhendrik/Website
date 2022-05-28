@@ -1,7 +1,7 @@
 .landingParent {
     display: flex;
     align-items: center;
-    padding: 30px 10%;
+    padding: 2vw 10%;
     margin-top: 15%;
 }
 
@@ -12,29 +12,35 @@
 
 .landingChildren p {
     width: 50vw;
-    font-size: 30px;
+    font-size: 2vw;
     color: white;
+}
+
+.landingChildren img {
+    width: 25vw;
+    height: auto;
 }
 
 .headline {
     margin: 5%;
     text-align: center;
     color: white;
-    font-size: 35px;
+    font-size: 5vw;
 }
 
 .grid-container {
+    justify-content: center;
     margin: auto;
     width: 50%;
-    padding: 10px;
+    padding: 2vw 5vw;
     display: grid;
     grid-template-columns: auto auto;
 }
 
 .grid-item {
     white-space: nowrap;
-    margin: 20px;
-    font-size: 28px;
+    margin: 15px 2vw;
+    font-size: 3vw;
     text-align: left;
     color: white;
 }
@@ -53,6 +59,7 @@
     align-items: center;
     margin-left: 25%;
     margin-right: 25%;
+    margin-bottom: 3vw;
 }
 
 .cvSymbolHeadline {
@@ -61,8 +68,8 @@
 }
 
 .cvSymbolHeadline p {
-    margin-left: 25px;
-    padding: 12px;
+    margin-left: 3vw;
+    padding: 2vw 2vw;
     background: white;
     border-radius: 25px;
 }
@@ -70,50 +77,33 @@
 .cvText {
     display: flex;
     align-items: center;
+    margin-top: 15px;
 }
 
 .cvText p {
     text-align: left;
-    height: 25vh;
-    font-size: 25px;
+    width: 45vw;
     color: white;
-    font-weight: 100;
+    font-size: 2vw;
 }
 
 .verticalStroke {
     border-left: 1px solid white;
-    height: 25vh;
-    margin-top: 10px;
-    margin-left: 85px;
-    margin-right: 85px;
+    height: 20vw;
+    margin-left: 7vw; /*sum of (.container width / 2) and .container margin */
+    margin-right: 7vw; /*sum of (.container width / 2) and .container margin */
 
 }
 
 .cv {
-    margin-bottom: 15vh;
-}
-
-.downloadButton {
-    display: block;
-    text-align: center;
-    color: black;
-    padding: 20px;
-    background: white;
-    border-radius: 25px;
-    transition: all 0.3s ease 0s;
-    margin: 10vh 40vw 10vh 40vw;
-}
-
-.downloadButton:hover {
-    color: white;
-    background: black;
+    margin-bottom: 30px;
 }
 
 .container{
-    width: 150px;
-    height: 150px;
+    width: 10vw;
+    height: 10vw;
     position: relative;
-    margin: 10px;
+    margin: 2vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -129,5 +119,22 @@
     z-index: 1;
     height: 50%;
     width: auto;
+}
+
+.downloadButton {
+    display: block;
+    text-align: center;
+    color: black;
+    padding: 20px 2vw;
+    background: white;
+    border-radius: 25px;
+    transition: all 0.3s ease 0s;
+    margin: 100px 40vw;
+    font-size: 2vw;
+}
+
+.downloadButton:hover {
+    color: white;
+    background: black;
 }
 
