@@ -4,48 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="indexstyles.css">
     <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <style>
+        * { font-family: 'Tahoma', monospace; }
+    </style>
 </head>
 <body>
-    <div class="headerDiv">
-        <ul class="nav_links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-        </ul>
+    <div class="header-box">
+        <p>hendriksteen</p>
+        <p>Menu</p>
     </div>
+
     <div class="landingParent">
-        <div class="landingChildren">
-            <!-- Add your name and what you do.-->
-            <div class="landingText">Hello I'm <span style="color: black;">Placeholder</span>.</div>
-            <div class="landingText">A hobby programmer.</div>
+        <div class="landingChildren1">
+            <p class="headline">Hallo, Ich bin</p>
+            <p class="headline">Hendrik</p>
+            <p class="subheadline">Ich programmiere aus Leidenschaft</p>
+            <a href="http//www.google.com" class="about-link" ><p class="about-link-paragraph">Über mich</p></a>
+            
         </div>
-        <div class="landingChildren">
-            <!-- Add a picture of yourself at this point with a square size. Example image from: https://unsplash.com/photos/WNoLnJo7tS8?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink-->
-            <img src="images/placeholderImage.jpg" alt="Profile image" class="dot">
+        <img src="images/placeholderImage.jpg" alt="Profile image" class="profileImage">
+    </div>
+
+    <div class="grid-container">
+        <div class="grid-item">
+            <p class="item-header">Mein Portfolio:</p>
+            <p class="item-text">Hier präsentiere ich alle Projekte die ich beendet habe</p>
+            <a href="https://www.apple.com" class="item-link">
+                <span class="material-icons md-1" style="color: blue; background-color: rgb(0,0,255,0.4); padding: 0.5vw; border-radius: 10px;">folder</span> Portfolio <span style="color: gray;">></span>
+            </a>
+        </div>
+        <div class="grid-item">
+            <p class="item-header">Mein Lebenslauf:</p>
+            <p class="item-text">Das enthält alles, was ich bis jetzt im Leben gemacht habe.</p>
+            <a href="https://www.apple.com" class="item-link">
+                <span class="material-icons md-1" style="color: green; background-color: rgb(0,255,0,0.4); padding: 0.5vw; border-radius: 10px;">badge</span> Lebenslauf <span style="color: gray;">></span>
+            </a>
+        </div>
+        <div class="grid-item">
+            <p class="item-header">Mein Blog:</p>
+            <p class="item-text">Ich versuche Entdeckungen festzuhalten.</p>
+            <a href="https://www.apple.com" class="item-link">
+                <span class="material-icons md-1" style="color: orange; background-color: rgb(255,136,0,0.4); padding: 0.5vw; border-radius: 10px;">article</span> Blog <span style="color: gray;">></span>
+            </a>
         </div>
     </div>
-    <p style="color: white; font-size: 45px; margin-left: 5%; margin-top: 75px;">Projects:</p>
-    <!-- The div from line 30 to 45 describes one of your projects. Add as many projects as you want. -->
-    <div class="projectParent">
-        <div class="projectChildren">
-            <!-- Add a description of your project and a link to a github page or any other repository to let others get in touch with your project.-->
-            <div class="projectText"><p style="margin: 10px 10px 15px 0; text-align: left;">Sample Project:</p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. <a href="https://github.com/testuser/testproject">GitHub</a></div>
-            <div class="projectImage">
-                <img class="exampleImage" src="images/placeholderImageProjectOne.png" alt="Screenshot from the sample project">
-                <img class="exampleImage" src="images/placeholderImageProjectTwo.png" alt="Screenshot from the sample project">
-            </div>
-        </div>
-        <!-- Add some screenshots from your project to give a quick preview on your project-->
-        <div class="projectTools">
-            <!-- Add tools with the example pattern below. Add a link to let others get to know the tools you used.-->
-            <a class="toolLink" href="https://developer.apple.com/documentation/swiftui/">SwiftUI</a>
-            <a class="toolLink" href="https://www.swift.org">Swift</a>
-        </div>
-    </div>
-    <!--End of one project Entry -->
-    <!-- Feel free to delete this line if it bothers you. When you delete look after the css section from line 55 in the styles.css file.-->
-    <p style="font-weight: 100; color: white; margin: 5vh; text-align: center;">Designed by <a href="https://github.com/comhendrik" class="creditLink" >comhendrik</a></p>
 </body>
 </html>
