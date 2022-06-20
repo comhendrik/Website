@@ -21,7 +21,7 @@
 
 .headline {
     color: black;
-    font-size: 5vw;
+    font-size: 4vw;
     margin: 0;
 }
 
@@ -87,7 +87,7 @@
     color: gray;
 }
 
-.item-link {
+.section {
     font-size: 2vw;
     color: black;
     text-decoration: none;
