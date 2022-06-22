@@ -37,64 +37,51 @@
 
 /* eventuell eine datei für die alle header. */
 
-.cv-container {
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(3, 32vw);
+    row-gap: 10px;
+    column-gap: 10px;
     margin: 1vw;
 }
 
-.cv-item {
+.blog-item {
+    height: 30vw;
+    /*defalut color value for background*/
+    background-color: aliceblue;
+    font-size: 1.5vw;
+    border-radius: 10px;
     padding: 0.75vw;
 }
 
+.blog-item.no-1 {
+    grid-column: 2 span;    
+}
 
-.cv-headline {
+
+.blog-headline {
     display: flex;
     justify-content: left;
     align-items: center;
 }
 
-.cv-image{
+.blog-image{
     width: 10vw;
     height: 10vw;
-    margin-right: 2vw;
     position: relative;
+    margin: 2vw;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.cvDot{
+.blogDot{
   height: 100%;
   width: 100%;
   border-radius: 50%;
   position: absolute;
-  background-color: black;
 }
 
-.material-icons.cv-top{
+.material-icons.blog-top{
     z-index: 1;
     font-size: 7vw;
-    color: white;
-}
-
-.cv-headline p {
-    color: black;
-    font-size: 2vw;
-}
-
-.cv-time {
-    color: gray;
-}
-
-.cv-text {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    font-size: 2vw;
-}
-
-.verticalStroke {
-    border-left: 1px solid black;
-    height: 20vw;
-    margin-left: 5vw; /* .cv-image width/2 */
-    margin-right: 6vw; /*sum of (.cv-image width / 2) and .cv-image margin-right */
-    margin-top: 1vw;
 }
