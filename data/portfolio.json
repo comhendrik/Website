@@ -1,0 +1,53 @@
+[
+    {
+        "title": "ShopApp",
+        "description": "Diese App ermöglicht es eine E-Commerce Plattform auf dem Handy zu entwickeln",
+        "images" : [
+            {
+                "path": "static/images/placeholderImageProjectOne.jpg"
+            },
+            {
+                "path": "static/images/placeholderImageProjectOne.png"
+            },
+            {
+                "path": "static/images/placeholderImageProjectOne.png"
+            }
+        ],
+        "github_link": "https://github.com/comhendrik",
+        "id": 1001
+    },
+    {
+        "title": "ShopApp",
+        "description": "Diese App ermöglicht es eine E-Commerce Plattform auf dem Handy zu entwickeln",
+        "images" : [
+            {
+                "path": "placeholderImageProjectOne.jpg"
+            },
+            {
+                "path": "placeholderImageProjectOne.jpg"
+            },
+            {
+                "path": "placeholderImageProjectOne.jpg"
+            }
+        ],
+        "github_link": "https://github.com/comhendrik",
+        "id": 1002
+    },
+    {
+        "title": "ShopApp",
+        "description": "Diese App ermöglicht es eine E-Commerce Plattform auf dem Handy zu entwickeln",
+        "images" : [
+            {
+                "path": "placeholderImageProjectOne.jpg"
+            },
+            {
+                "path": "placeholderImageProjectOne.jpg"
+            },
+            {
+                "path": "placeholderImageProjectOne.jpg"
+            }
+        ],
+        "github_link": "https://github.com/comhendrik",
+        "id": 1003
+    }
+]

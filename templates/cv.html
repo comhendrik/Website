@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/cv.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <style>
+        * { font-family: 'Tahoma', monospace;}
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="header-box">
+        <a href="index.html">hendriksteen</a>
+        <p>Menu</p>
+    </div>
+    <div class="section"> <span class="material-icons md-1" style="color: green; background-color: rgb(0,255,0,0.4);">badge</span> Lebenslauf </div>
+
+    <div class="cv-container">
+
+        {% for item in cv_data %}
+            <div class="cv-item">
+                <div class="cv-headline">
+                    <div class="cv-image">
+                        <span class="cvDot"></span>
+                        <span class="material-icons cv-top">{{item.icon}}</span>
+                    </div>
+                    <p>{{item.category}}<br><span class="cv-time">{{item.date}}</span></p>
+                </div>
+                <div class="cv-text">
+                    <div class="verticalStroke"></div>
+                    <p>{{item.description}}</p>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+    
+</body>
+</html>
