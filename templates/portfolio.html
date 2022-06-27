@@ -23,19 +23,43 @@
         {% for item in portfolio_data %}
             <div class="pf-item">
 
-                <div class="img-container">
-                    {% for img in item.images %}
-                    <img src="static/images/placeholderImageProjectOne.jpg" alt="placeholderImage">
-                    {% endfor %}
-                </div>
+                
+                {% if loop.index is divisibleby 2  %}
 
-                <div class="pf-item-text">
-                    <p class="item-text-header">{{item.title}}</p>
-                    <p class="item-text-description">{{item.description}}</p>
-                    <a href="{{item.github_link}}" class="item-link">
-                        <span class="material-icons md-2" style="color: blue; background-color: rgb(0,0,255,0.4);">code</span> GitHub <span style="color: gray;">></span>
-                    </a>
-                </div>
+                    <div class="pf-item-text">
+                        <p class="item-text-header">{{item.title}}</p>
+                        <p class="item-text-description">{{item.description}}</p>
+                        <a href="{{item.github_link}}" class="item-link">
+                            <span class="material-icons md-2" style="color: black; background-color: rgb(0,0,0,0.4);">code</span> GitHub <span style="color: gray;">></span>
+                        </a>
+                    </div>
+
+                    <div class="img-container">
+                        {% for img in item.images %}
+                        <img src="{{img.path}}" alt="placeholderImage">
+                        {% endfor %}
+                    </div>
+
+                {% else %}
+
+                    <div class="img-container">
+                        {% for img in item.images %}
+                        <img src="{{img.path}}" alt="placeholderImage">
+                        {% endfor %}
+                    </div>
+
+                    <div class="pf-item-text">
+                        <p class="item-text-header">{{item.title}}</p>
+                        <p class="item-text-description">{{item.description}}</p>
+                        <a href="{{item.github_link}}" class="item-link">
+                            <span class="material-icons md-2" style="color: black; background-color: rgb(0,0,0,0.4);">code</span> GitHub <span style="color: gray;">></span>
+                        </a>
+                    </div>
+
+                    
+                
+                {% endif %}
+                
             </div>
         {% endfor %}
     </div>

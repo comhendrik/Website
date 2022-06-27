@@ -1,8 +1,9 @@
 import os
-from pydoc import render_doc
 import json
 
 from flask import * 
+
+from Website.db import get_db, query_db
 
 import json
 
@@ -12,7 +13,7 @@ def create_app():
     app = Flask(__name__, instance_relative_config=True, template_folder='templates', static_folder='static')
     app.config.from_mapping(
         SECRET_KEY='dev',
-        #DATABASE=os.path.join(app.instance_path, 'db.sqlite'),
+        DATABASE=os.path.join(app.instance_path, 'db.sqlite'),
         UPLOAD_FOLDER = IMAGE_FOLDER
     )
 
@@ -35,7 +36,11 @@ def create_app():
 
     @app.route('/blog.html')
     def direct_to_blog():
-        return render_template("blog.html")
+        db = get_db()
+        cursor = db.cursor()
+        results = query_db("SELECT * FROM article", cursor=cursor)
+        results = sorted(results, key=lambda d: d['id'], reverse=True)
+        return render_template("blog.html", article=results)
 
     @app.route('/portfolio.html')
     def direct_to_portfolio():
@@ -49,7 +54,12 @@ def create_app():
 
     
 
-    #from . import db
-    #db.init_app(app)
+    from . import db
+    db.init_app(app)
+
+
+    from Website.adminData import admin
+
+    app.register_blueprint(admin.bp)
 
     return app

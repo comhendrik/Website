@@ -21,28 +21,20 @@
     
     <div class="blog-container">
 
-        <div class="blog-item no-1" style="background-color: rgb(16,115,248,0.6);">
+        {% for entry in article %}
+
+        <div class="blog-item {{ loop.cycle('no-1', 'no-2', 'no-2', 'no-1') }}" style="background-color: rgb({{entry.r}},{{entry.g}},{{entry.b}}, 0.6);">
             <div class="blog-headline">
                 <div class="blog-image">
-                    <span class="blogDot" style="background-color: rgb(16,115,248);"></span>
-                    <span class="material-icons blog-top" style="color: white;">code</span>
+                    <span class="blogDot" style="background-color: rgb({{entry.r}},{{entry.g}},{{entry.b}});"></span>
+                    <span class="material-icons blog-top" style="color: white;">{{entry.icon}}</span>
                 </div>
-                <p style="color: rgb(16,115,248);">How to start with Docker</p>
+                <p style="color: rgb({{entry.r}},{{entry.g}},{{entry.b}});">{{entry.title}}</p>
             </div>
-            <p>Dieser Artikel erzählt die Geschichte wie ich es geschafft habe meinen ersten Docker Container zu hosten</p>
+            <p>{{entry.head}}</p>
         </div>
 
-        <div class="blog-item" style="background-color: rgb(255,116,0, 0.6);">
-            <div class="blog-headline">
-                <div class="blog-image">
-                    <span class="blogDot" style="background-color: orange;"></span>
-                    <span class="material-icons blog-top" style="color: white;">store</span>
-                </div>
-                <p style="color: orange;">How to start with Docker</p>
-            </div>
-            <p>Einzelhandel:
-                Seit dem Sommer 2021 arbeite ich nebenbei im Einzelhandel, um etwas Erfahrung zu sammeln und etwas beiseite zu legen. Das Gefühl, dass jemand Vertrauen in dich hat ist einfach schön.</p>
-        </div>
+        {% endfor %}
 
     </div>
 </body>

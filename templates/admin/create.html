@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for message in get_flashed_messages() %}
+        <div>{{ message }}</div>
+    {% endfor %}
+    <form method="POST">
+        <div class="name_field"><input type="text" name="title" placeholder="title"></div>
+        <div><input type="text" name="body" placeholder="body"></div>
+        <div><input type="text" name="head" placeholder="head"></div>
+        <div><input type="text" name="icon" placeholder="icon"></div>
+        <div><input type="text" name="r" placeholder="r color value"></div>
+        <div><input type="text" name="g" placeholder="g color value"></div>
+        <div><input type="text" name="b" placeholder="b color value"></div>
+        <div><input type="text" name="admin" placeholder="admin"></div>
+        <div><input type="text" name="password" placeholder="password"></div>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

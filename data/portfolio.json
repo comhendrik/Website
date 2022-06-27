@@ -4,7 +4,7 @@
         "description": "Diese App ermöglicht es eine E-Commerce Plattform auf dem Handy zu entwickeln",
         "images" : [
             {
-                "path": "static/images/placeholderImageProjectOne.jpg"
+                "path": "static/images/placeholderImageProjectOne.png"
             },
             {
                 "path": "static/images/placeholderImageProjectOne.png"
@@ -21,13 +21,13 @@
         "description": "Diese App ermöglicht es eine E-Commerce Plattform auf dem Handy zu entwickeln",
         "images" : [
             {
-                "path": "placeholderImageProjectOne.jpg"
+                "path": "static/images/placeholderImageProjectOne.png"
             },
             {
-                "path": "placeholderImageProjectOne.jpg"
+                "path": "static/images/placeholderImageProjectOne.png"
             },
             {
-                "path": "placeholderImageProjectOne.jpg"
+                "path": "static/images/placeholderImageProjectOne.png"
             }
         ],
         "github_link": "https://github.com/comhendrik",
@@ -38,13 +38,13 @@
         "description": "Diese App ermöglicht es eine E-Commerce Plattform auf dem Handy zu entwickeln",
         "images" : [
             {
-                "path": "placeholderImageProjectOne.jpg"
+                "path": "static/images/placeholderImageProjectOne.png"
             },
             {
-                "path": "placeholderImageProjectOne.jpg"
+                "path": "static/images/placeholderImageProjectOne.png"
             },
             {
-                "path": "placeholderImageProjectOne.jpg"
+                "path": "static/images/placeholderImageProjectOne.png"
             }
         ],
         "github_link": "https://github.com/comhendrik",
