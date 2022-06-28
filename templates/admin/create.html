@@ -7,9 +7,9 @@
     <form method="POST">
         <p>Text:</p>
         <div class="name_field"><input type="text" name="title" placeholder="title"></div>
-        <div><input type="text" name="body" placeholder="body"></div>
         <div><input type="text" name="head" placeholder="head"></div>
         <div><input type="text" name="icon" placeholder="icon"></div>
+        <textarea name="body" rows="5" cols="50">body</textarea>
         <p>Color:</p>
         <div><input type="text" name="r" placeholder="r color value"></div>
         <div><input type="text" name="g" placeholder="g color value"></div>
@@ -17,6 +17,8 @@
         <p>Credentials for authentication</p>
         <div><input type="text" name="admin" placeholder="admin"></div>
         <div><input type="text" name="password" placeholder="password"></div>
+        <p>Link to same article from another webpage like Medium,etc. (not required)</p> 
+        <div><input type="text" name="link" placeholder="Link"></div>
         <input type="submit" value="Submit">
     </form>
 {% endblock %}

@@ -23,18 +23,18 @@ def create_app():
     except OSError:
         pass
 
-    @app.route('/index.html')
+    @app.route('/index')
     def direct_to_index():
         return render_template("index.html")
 
-    @app.route('/cv.html')
+    @app.route('/cv')
     def direct_to_cv():
         f = open('data/cv.json')
         data = json.load(f)
         f.close()
         return render_template("cv.html", cv_data = data)
 
-    @app.route('/blog.html')
+    @app.route('/blog')
     def direct_to_blog():
         db = get_db()
         cursor = db.cursor()
@@ -42,12 +42,22 @@ def create_app():
         results = sorted(results, key=lambda d: d['id'], reverse=True)
         return render_template("blog.html", article=results)
 
-    @app.route('/portfolio.html')
+    @app.route('/portfolio')
     def direct_to_portfolio():
         f = open('data/portfolio.json')
         data = json.load(f)
         f.close()
         return render_template("portfolio.html", portfolio_data = data)
+
+    @app.route('/<int:article_id>')
+    def direct_to_blog_article(article_id):
+        db = get_db()
+        cursor = db.cursor()
+        results = query_db(f"SELECT * FROM article WHERE id={article_id}", cursor=cursor)
+        if len(results) == 0:
+            return "404-This Page doesn't exist"
+        return render_template("article.html", article=results[0])
+
 
 
 

@@ -1,5 +1,5 @@
 import os
-from flask import flash, request, redirect, render_template, Blueprint
+from flask import flash, request, redirect, render_template, Blueprint, url_for
 from werkzeug.utils import secure_filename
 
 
@@ -16,7 +16,8 @@ def create_blog_article():
         icon = request.form.get('icon')
         r = request.form.get('r')
         g = request.form.get('g')
-        b = request.form.get('b')    
+        b = request.form.get('b') 
+        link = request.form.get('link')
         admin = request.form.get('admin')
         password = request.form.get('password')
 
@@ -30,7 +31,7 @@ def create_blog_article():
         db = get_db()
         cursor = db.cursor()
         try: 
-            cursor.execute(f"INSERT INTO article (title, head, body, icon, r, g, b) VALUES ('{title}', '{head}', '{body}', '{icon}', '{r}', '{g}', '{b}')")
+            cursor.execute(f"INSERT INTO article (title, head, body, icon, r, g, b, link) VALUES ('{title}', '{head}', '{body}', '{icon}', '{r}', '{g}', '{b}', '{link}')")
             db.commit()
             db.close()
 
@@ -38,7 +39,7 @@ def create_blog_article():
             flash("Problem with uploading post")
             db.close()
 
-        return redirect('create-blog-article')
+        return redirect(url_for('direct_to_blog'))
 
         
     return render_template('admin/create.html')
