@@ -1,22 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../static/index.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-    <style>
-        * { font-family: 'Tahoma', monospace; }
-    </style>
-</head>
-<body>
-    <div class="header-box">
-        <a href="index.html">hendriksteen</a>
-        <p>Menu</p>
-    </div>
+{% extends 'base.html' %}
+
+{% block content %}
+<link rel="stylesheet" href="../static/index.css">
 
     <div class="landingParent">
         <div class="landingChildren1">
@@ -52,5 +37,4 @@
             </a>
         </div>
     </div>
-</body>
-</html>
+{% endblock %}

@@ -1,24 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends 'base.html' %}
+
+
+{% block content %}
     <link rel="stylesheet" href="../static/blog.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    rel="stylesheet">
-    <style>
-        * { font-family: 'Tahoma', monospace;}
-    </style>
-    <title>Document</title>
-</head>
-<body>
-    <div class="header-box">
-        <a href="index.html">hendriksteen</a>
-        <p>Menu</p>
-    </div>
     <div class="section"> <span class="material-icons md-1" style="color: orange; background-color: rgb(255,136,0,0.4);">article</span> Blog </div>
-    
+        
     <div class="blog-container">
 
         {% for entry in article %}
@@ -37,5 +23,5 @@
         {% endfor %}
 
     </div>
-</body>
-</html>
+
+{% endblock %}
