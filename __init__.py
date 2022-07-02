@@ -54,6 +54,7 @@ def create_app():
         db = get_db()
         cursor = db.cursor()
         results = query_db(f"SELECT * FROM article WHERE id={article_id}", cursor=cursor)
+        print(results)
         if len(results) == 0:
             return "404-This Page doesn't exist"
         return render_template("article.html", article=results[0])

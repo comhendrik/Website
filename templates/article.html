@@ -2,11 +2,10 @@
 
 {% block content %}
     <link rel="stylesheet" href="../static/article.css">
-
     <div class="article">
         <h1>{{article.title}}</h1>
         <h4>{{article.head}}</h4>
-        <p>{{article.body}}</p>
+        {{article.body|safe}}
         {% if article.link %}
             <p><a href="{{article.link}}">This article is also available on another site.</a></p>
         {% endif %}
