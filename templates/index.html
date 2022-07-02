@@ -1,22 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-    <style>
-        * { font-family: 'Tahoma', monospace; }
-    </style>
-</head>
-<body>
-    <div class="header-box">
-        <a href="index.html">hendriksteen</a>
-        <p>Menu</p>
-    </div>
+{% extends 'base.html' %}
+
+{% block content %}
+<link rel="stylesheet" href="../static/index.css">
 
     <div class="landingParent">
         <div class="landingChildren1">
@@ -26,31 +11,30 @@
             <a href="http//www.google.com" class="about-link" ><p class="about-link-paragraph">Über mich</p></a>
             
         </div>
-        <img src="images/placeholderImage.jpg" alt="Profile image" class="profileImage">
+        <img src="static/images/placeholderImage.jpg" alt="Profile image" class="profileImage">
     </div>
 
     <div class="grid-container">
         <div class="grid-item">
             <p class="item-header">Mein Portfolio:</p>
             <p class="item-text">Hier präsentiere ich alle Projekte die ich beendet habe</p>
-            <a href="portfolio.html" class="section">
+            <a href="portfolio" class="section">
                 <span class="material-icons md-1" style="color: blue; background-color: rgb(0,0,255,0.4); padding: 0.5vw; border-radius: 10px;">folder</span> Portfolio <span style="color: gray;">></span>
             </a>
         </div>
         <div class="grid-item">
             <p class="item-header">Mein Lebenslauf:</p>
             <p class="item-text">Das enthält alles, was ich bis jetzt im Leben gemacht habe.</p>
-            <a href="cv.html" class="section">
+            <a href="cv" class="section">
                 <span class="material-icons md-1" style="color: green; background-color: rgb(0,255,0,0.4); padding: 0.5vw; border-radius: 10px;">badge</span> Lebenslauf <span style="color: gray;">></span>
             </a>
         </div>
         <div class="grid-item">
             <p class="item-header">Mein Blog:</p>
             <p class="item-text">Ich versuche Entdeckungen festzuhalten.</p>
-            <a href="blog.html" class="section">
+            <a href="blog" class="section">
                 <span class="material-icons md-1" style="color: orange; background-color: rgb(255,136,0,0.4); padding: 0.5vw; border-radius: 10px;">article</span> Blog <span style="color: gray;">></span>
             </a>
         </div>
     </div>
-</body>
-</html>
+{% endblock %}
