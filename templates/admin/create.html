@@ -1,15 +1,23 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    <script>
+        function renderPreview() {
+            document.getElementById("title-field").innerHTML = document.getElementById("title").value;
+            document.getElementById("head-field").innerHTML = document.getElementById("head").value;
+            document.getElementById("body-field").innerHTML = document.getElementById("body").value;
+            
+        }
+    </script>
     {% for message in get_flashed_messages() %}
      <div>{{ message }}</div>
     {% endfor %}
     <div class="container" style="display: flex; align-items:center; justify-content: space-between;">
         <form method="POST">
             <p>Text:</p>
-            <div class="name_field"><input type="text" name="title" placeholder="title for article"></div>
-            <div><input type="text" name="head" placeholder="summary of article"></div>
-            <textarea name="body" rows="10" cols="50">Write your blog according to the rules of HTML. The Webpage will be rendered right</textarea>
+            <div class="name_field"><input type="text" name="title" placeholder="title for article" id="title"></div>
+            <div><input type="text" name="head" placeholder="summary of article" id="head"></div>
+            <textarea name="body" rows="10" cols="50" id="body">Write your blog according to the rules of HTML. The Webpage will be rendered right</textarea>
             <div><input type="text" name="icon" placeholder="icon"><a href="https://fonts.google.com/icons?selected=Material+Icons">Use Name of google material icon</a></div>
             <p>Color:</p>
             <div><input type="text" name="r" placeholder="r color value"></div>
@@ -22,13 +30,14 @@
             <div><input type="text" name="link" placeholder="Link"></div>
             <input type="submit" value="Submit">
         </form>
-        <div style="max-width: 50vw; word-wrap: break-word;">
+        <div style="width: 50vw; word-wrap: break-word;">
             <p>Blog article will look similar to this on the article page</p>
             <div class="Preview-Content" style="margin-right: 5vw; border: 2px solid red">
-                <h1>Test headline</h1>
-                <h4>Test subheadline</h4>
-                <p>Testing body asfjsadklfjasdröodiorasfguhoierfhgoiaerhgoerutoasjdfoilajsdlfkjasdlkfjsladfjlasdkfjlsadkjflaskfasdfklasdkflsadkfalsdjfalskdfjlskdjflkasdjflskdajflkasjdflkjasldfjaslkdfjlaskdjflaksjdfklasdjfaksdjflksadjaflkasdjflkjsdaflkashlaslkajewoifnasdkfdfjasldkjfsaldkjflaksdjflksdj</p>
+                <h1 id="title-field">Test headline</h1>
+                <h4 id="head-field">Test subheadline</h4>
+                <p id="body-field">Testing body asfjsadklfjasdröodiorasfguhoierfhgoiaerhgoerutoasjdfoilajsdlfkjasdlkfjsladfjlasdkfjlsadkjflaskfasdfklasdkflsadkfalsdjfalskdfjlskdjflkasdjflskdajflkasjdflkjasldfjaslkdfjlaskdjflaksjdfklasdjfaksdjflksadjaflkasdjflkjsdaflkashlaslkajewoifnasdkfdfjasldkjfsaldkjflaksdjflksdj</p>
             </div>
+            <button onclick="renderPreview()">Render changes</button>
         </div>
     </div>
 {% endblock %}
