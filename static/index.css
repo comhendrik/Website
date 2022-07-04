@@ -1,24 +1,3 @@
-.header-box {
-    display: flex;
-    justify-content: space-between;
-    background-color: rgb(16,115,248);
-    padding-left: 10px;
-    padding-right: 3vw;
-    border-radius: 15px;
-    color: white;
-    margin: 20px 1vw;
-    height: 75px;
-    align-items: center;
-}
-
-.header-box a {
-    text-decoration: none;
-    color: white;
-}
-
-/* eventuell eine datei für die alle header. */
-
-
 .landingParent {
     display: flex;
     justify-content: space-between;

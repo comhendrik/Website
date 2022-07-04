@@ -27,6 +27,10 @@ def create_app():
     def direct_to_index():
         return render_template("index.html")
 
+    @app.route('/about')
+    def direct_to_about():
+        return render_template("about.html")
+
     @app.route('/cv')
     def direct_to_cv():
         f = open('data/cv.json')
