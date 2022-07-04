@@ -1,0 +1,22 @@
+<h1>Blog article deletion for website YOURWEBSITENAME</h1>
+{% for message in get_flashed_messages() %}
+    <div style="color: red;">{{ message }}</div>
+{% endfor %}
+
+{% for entry in article %}
+    <div style="border: 5px solid rgb({{entry.r}},{{entry.g}},{{entry.b}});">
+        <p>{{entry.id}}</p>
+        <p>{{entry.title}}</p>
+        <p>{{entry.head}}</p>
+        <p>{{entry.body}}</p>
+        <p>{{entry.icon}}</p>
+        <p>{{entry.link}}</p> 
+    </div>
+{% endfor %}
+<form method="POST">
+    <p>Use the id of an article to delete it.</p>
+    <input type="text" name="admin" id="admin" placeholder="admin">
+    <input type="text" name="password" id="password" placeholder="password">
+    <input type="text" name="idOfArticle" id="idOfArticle" placeholder="id of Article">
+    <input type="submit" value="Submit">
+</form>

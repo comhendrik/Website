@@ -13,11 +13,11 @@
             <div class="blog-headline">
                 <div class="blog-image">
                     <span class="blogDot" style="background-color: rgb({{entry.r}},{{entry.g}},{{entry.b}});"></span>
-                    <span class="material-icons blog-top" style="color: white;">{{entry.icon}}</span>
+                    <span class="material-icons blog-top">{{entry.icon}}</span>
                 </div>
-                <p style="color: rgb({{entry.r}},{{entry.g}},{{entry.b}});">{{entry.title}}</p>
+                <p class="title">{{entry.title}}</p>
             </div>
-            <p>{{entry.head}} <a href="/{{entry.id}}" style="color: white;">Continue Reading</a></p>
+            <p class="head">{{entry.head}} <a href="/{{entry.id}}">Continue Reading</a></p>
         </div>
 
         {% endfor %}

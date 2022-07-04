@@ -1,0 +1,2 @@
+YOURADMINNAME = 'admin'
+YOURPASSWORD = 'password'

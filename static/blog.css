@@ -8,11 +8,9 @@
 
 .blog-item {
     height: 30vw;
-    /*defalut color value for background*/
-    background-color: aliceblue;
+    /*background color is set in blog.html*/
     font-size: 1.5vw;
     border-radius: 10px;
-    padding: 0.75vw;
 }
 
 .blog-item.no-1 {
@@ -36,13 +34,27 @@
     align-items: center;
 }
 .blogDot{
-  height: 100%;
-  width: 100%;
-  border-radius: 50%;
-  position: absolute;
+    /*background color is set in blog.html*/
+    border-radius: 50%;
+    position: absolute;
+    /* padding-bottom is eqaul to width and height equal to 0 because that makes the width and height of container identical*/
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%
 }
 
 .material-icons.blog-top{
     z-index: 1;
     font-size: 7vw;
+    color: white;
+}
+
+.title {
+    color: black;
+}
+
+.head {
+    margin-left: 2.5vw;
+    margin-right: 1vw;
+    color: black;
 }
