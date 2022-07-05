@@ -3,9 +3,9 @@ from flask import flash, request, redirect, render_template, Blueprint, url_for
 from werkzeug.utils import secure_filename
 
 
-from Website.db import get_db, query_db
+from db import get_db, query_db
 
-from Website.setup import YOURADMINNAME, YOURPASSWORD
+from setup import YOURADMINNAME, YOURPASSWORD
 
 bp = Blueprint("bp_admin",__name__, url_prefix="/admin")
 

@@ -7,18 +7,19 @@
 .landingParent {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 2vw 10%;
 }
 
 .landingChildren {
     text-align: left;
-    margin-left: 5vw;
 }
 
 .landingChildren p {
     width: 50vw;
     font-size: 2vw;
     color: black;
+    margin: 3vw;
 }
 
 .landingChildren img {
