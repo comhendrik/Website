@@ -7,7 +7,7 @@
         <h4>{{article.head}}</h4>
         {{article.body|safe}}
         {% if article.link %}
-            <p><a href="{{article.link}}">This article is also available on another site.</a></p>
+            <p><a href="{{article.link}}">{{text.LINK}}</a></p>
         {% endif %}
     </div>
 {% endblock %}

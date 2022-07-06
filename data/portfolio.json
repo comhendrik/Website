@@ -1,16 +1,33 @@
 [
     {
-        "title": "App Title",
-        "description": "Describe what your app can do",
+        "title": "English Project Example",
+        "description": "Describe what your project can do.",
         "images" : [
             {
-                "path": "static/images/placeholderImageProjectOne.png"
+                "path": "static/images/placeholderProjectOne/placeholderImageProjectOne.png"
             },
             {
-                "path": "static/images/placeholderImageProjectOne.png"
+                "path": "static/images/placeholderProjectOne/placeholderImageProjectOne.png"
             },
             {
-                "path": "static/images/placeholderImageProjectOne.png"
+                "path": "static/images/placeholderProjectOne/placeholderImageProjectOne.png"
+            }
+        ],
+        "github_link": "https://github.com/YOURGITHUBUSERNAME1234/PATHTOPROJECT",
+        "id": 1
+    },
+    {
+        "title": "Deutsches Beispiel für ein Projekt",
+        "description": "Beschreibe, was dein Projekt macht",
+        "images" : [
+            {
+                "path": "static/images/placeholderProjectTwo/placeholderImageProjectTwo.png"
+            },
+            {
+                "path": "static/images/placeholderProjectTwo/placeholderImageProjectTwo.png"
+            },
+            {
+                "path": "static/images/placeholderProjectTwo/placeholderImageProjectTwo.png"
             }
         ],
         "github_link": "https://github.com/YOURGITHUBUSERNAME1234/PATHTOPROJECT",
