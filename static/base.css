@@ -1,3 +1,5 @@
+* { font-family: 'Tahoma', monospace;}
+
 .header-box {
     display: flex;
     justify-content: space-between;

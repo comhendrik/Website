@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <link rel="stylesheet" href="../static/about.css">
+    <div class="page">
+        <div class="landingParent">
+            <div class="landingChildren">
+                <img src="static/images/placeholderImage.jpg" alt="Profile image" class="dot">
+            </div>
+            <div class="landingChildren">
+                <p>Hello,</p>
+                <p>i am YOURNAME and you can post some information about yourself in this field</p>
+            </div>
+        </div>
+        <p class="headline">Infos über mich:</p>
+        <div class="grid-container">
+            <div class="grid-item">Name: YOURNAME</div>
+            <div class="grid-item">Email: <a href="mailto:YOURMAIL@icloud.com">YOURMAIL@icloud.com</a></div>
+            <div class="grid-item">Nachname: YOURLASTNAME</div>
+            <div class="grid-item">GitHub: <a href="https://github.com/YOURGITHUBNAME1234">YOURGITHUBNAME1234</a></div> 
+        </div>
+    </div>
+
+{% endblock %}
