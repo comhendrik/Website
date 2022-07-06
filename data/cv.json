@@ -1,51 +1,9 @@
 [
     {
-        "category": "Grundschule",
+        "category": "First Item Category",
         "date": "2011-2015",
-        "description": "Meine Grundschulzeit habe ich an der Jens-Iwersen-Schule in Hattstedt in Schleswig-Holstein absolviert.",
+        "description": "This Text describes what you have done in this time. When your category is Primary School, write something about your time in Primary School.",
         "icon": "school",
         "id": 1001
-    },
-    {
-        "category": "Jiu-Jitsu",
-        "date": "2011-2019",
-        "description": "Mein erstes richtiges Hobby war Jiu-Jitsu. Ich hatte sehr viel Spaß dabei und es geschafft den blauen Gürtel zu erlangen. Zwischen dem schwarzen Meistergürtel liegt nur der braune Gürtel. Es ist zwar schon einige Zeit her, dass ich diese Kampfsportart betrieben habe, aber ich bin nicht abgeneigt in Zukunft mir den Meister Gürtel zu erarbeiten",
-        "icon": "sports_martial_arts",
-        "id": 1002
-    },
-    {
-        "category": "Gymnasium",
-        "date": "2015-heute",
-        "description": "Meine gymnasial Ausbildung erlange ich an der Theodor-Storm-Schule, dem städtischen Gymnasium Husum in Schleswig-Holstein. Während meiner Schulzeit habe ich mich weiter verändert und den Blick in die Informatik gefunden. Das Abitur werde ich im Sommer 2023 erlangen.",
-        "icon": "school",
-        "id": 1003
-    },
-    {
-        "category": "Basketball als Spieler",
-        "date": "2019-heute",
-        "description": "2019 habe ich meinen Spaß am Basketball entdeckt. Ich konnte mich in meiner Mannschaft schnell etablieren und ich habe viele nette Menschen über diesen Sport kennengelern. Ich kann mich sehr dafür faszinieren einem Team oder Spieler zuzuschauen und zuversuchen das Gesehene umzusetzen.",
-        "icon": "sports_basketball",
-        "id": 1004
-    },
-    {
-        "category": "Basketball als Trainer",
-        "date": "2020-heute",
-        "description": "Ich habe schnell gefallen daran gefunden selber als Trainer tätig zu sein und Verantwortung über eine Gruppe zu übernehmen, weshalb mir gemeinsam mit einem weiteren Trainer die U12/U14 aus Husum anvertraut wurde. Ich konnte ebenfalls einen Trainerscheinlehrgang erfolgreich absolvieren.",
-        "icon": "sports_basketball",
-        "id": 1005
-    },
-    {
-        "category": "Programmierung",
-        "date": "2020-heute",
-        "description": "Ich habe mich schon immer für das Feld rund um Computer interessiert, aber der Lockdown im Jahr 2020 hat mich dazu gebracht es mal auszuprobieren selber ein Programm zu schreiben. Angefangen habe ich mit der nativer iOS Programmierung und bin über Python bis hin zur Entwicklung dieser statischen Websiten gekommen. Ich versuche Konzepte zu erlernen und nicht einfach die Syntax einer Sprache, da ich mir bewusst bin, dass es nicht den perfekten Weg gibt.",
-        "icon": "code",
-        "id": 1006
-    },
-    {
-        "category": "Einzelhandel",
-        "date": "2021-heute",
-        "description": "Seit dem Sommer 2021 arbeite ich nebenbei im Einzelhandel, um etwas Erfahrung zu sammeln und etwas beiseite zu legen. Das Gefühl, dass jemand Vertrauen in dich hat ist einfach schön.",
-        "icon": "store",
-        "id": 1007
     }
 ]

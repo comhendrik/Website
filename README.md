@@ -6,6 +6,8 @@ Why I have buil this project:<br/>
 I started this project to learn HTML, CSS, a little bit of JS  and to create a website for my project portfolio and CV.<br/>
 
 Download:<br/>
+
+Setup:<br/>
 1. Locally
 2. Docker Container
 3. Heroku Webhost

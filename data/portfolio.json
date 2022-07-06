@@ -1,7 +1,7 @@
 [
     {
-        "title": "ShopApp",
-        "description": "Diese App ermöglicht es eine E-Commerce Plattform auf dem Handy zu entwickeln",
+        "title": "App Title",
+        "description": "Describe what your app can do",
         "images" : [
             {
                 "path": "static/images/placeholderImageProjectOne.png"
@@ -13,41 +13,7 @@
                 "path": "static/images/placeholderImageProjectOne.png"
             }
         ],
-        "github_link": "https://github.com/comhendrik",
+        "github_link": "https://github.com/YOURGITHUBUSERNAME1234/PATHTOPROJECT",
         "id": 1001
-    },
-    {
-        "title": "ShopApp",
-        "description": "Diese App ermöglicht es eine E-Commerce Plattform auf dem Handy zu entwickeln",
-        "images" : [
-            {
-                "path": "static/images/placeholderImageProjectOne.png"
-            },
-            {
-                "path": "static/images/placeholderImageProjectOne.png"
-            },
-            {
-                "path": "static/images/placeholderImageProjectOne.png"
-            }
-        ],
-        "github_link": "https://github.com/comhendrik",
-        "id": 1002
-    },
-    {
-        "title": "ShopApp",
-        "description": "Diese App ermöglicht es eine E-Commerce Plattform auf dem Handy zu entwickeln",
-        "images" : [
-            {
-                "path": "static/images/placeholderImageProjectOne.png"
-            },
-            {
-                "path": "static/images/placeholderImageProjectOne.png"
-            },
-            {
-                "path": "static/images/placeholderImageProjectOne.png"
-            }
-        ],
-        "github_link": "https://github.com/comhendrik",
-        "id": 1003
     }
 ]
