@@ -3,7 +3,7 @@
 
 {% block content %}
     <link rel="stylesheet" href="../static/blog.css">
-    <div class="section"> <span class="material-icons md-1" style="color: orange; background-color: rgb(255,136,0,0.4);">article</span> blog </div>
+    <div class="section"> <span class="material-icons md-1" style="color: orange; background-color: rgb(255,136,0,0.4);">article</span> {{text.HEADER}} </div>
         
     <div class="blog-container">
 
@@ -17,7 +17,7 @@
                 </div>
                 <p class="title">{{entry.title}}</p>
             </div>
-            <p class="head">{{entry.head}} <a href="/{{entry.id}}">Continue Reading</a></p>
+            <p class="head">{{entry.head}} <a href="/{{entry.id}}">{{text.LINK}}</a></p>
         </div>
 
         {% endfor %}

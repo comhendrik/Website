@@ -1,9 +1,16 @@
 [
     {
-        "category": "First Item Category",
+        "category": "English Example",
         "date": "2011-2015",
-        "description": "This Text describes what you have done in this time. When your category is Primary School, write something about your time in Primary School.",
+        "description": "This example shows how you should add a part of your cv in the data/cv.json file in english language. The description property should be filled with text about the category",
         "icon": "school",
-        "id": 1001
+        "id": 1
+    },
+    {
+        "category": "Deutsches Beispiel",
+        "date": "2011-2015",
+        "description": "Dieses Beispiel soll auf deutscher Sprache zeigen, wie du deinen Lebenslauf in der data/blog.json Datei erweitertest. Die Beschreibung sollte mit Text über die Kategorie gefüllt sein.",
+        "icon": "school",
+        "id": 2
     }
 ]

@@ -1,0 +1,24 @@
+[
+    {
+        "title": "Englisch Example",
+        "head": "Example of Blog entry in englisch",
+        "body": "<h4>This</h4> <b>blog entry</b> shows how you should add a blog entry in the data/blog.json file in english language.",
+        "icon": "school",
+        "link": "https://google.com",
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "id": 1
+    },
+    {
+        "title": "Deutsches Beispiel",
+        "head": "Beispiel eines Blogeintrages auf Deutsch",
+        "body": "Dieser <b>Eintrag</b> soll auf deutscher Sprache zeigen, wie du einen Blogeintrag in die data/blog.json Datei hinzufügst.",
+        "icon": "school",
+        "link": "https://google.com",
+        "r": 16,
+        "g": 114,
+        "b": 35,
+        "id": 2
+    }
+]

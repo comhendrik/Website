@@ -8,16 +8,16 @@
                 <img src="static/images/placeholderImage.jpg" alt="Profile image" class="dot">
             </div>
             <div class="landingChildren">
-                <p>Hello,</p>
-                <p>i am YOURNAME and you can post some information about yourself in this field</p>
+                <p>{{text.HELLO}} {{websiteData.FIRSTNAME}},</p>
+                <p>{{websiteData.INFORMATIONTEXT}}</p>
             </div>
         </div>
-        <p class="headline">Infos über mich:</p>
+        <p class="headline">{{text.INFO}}</p>
         <div class="grid-container">
-            <div class="grid-item">Name: YOURNAME</div>
-            <div class="grid-item">Email: <a href="mailto:YOURMAIL@icloud.com">YOURMAIL@icloud.com</a></div>
-            <div class="grid-item">Nachname: YOURLASTNAME</div>
-            <div class="grid-item">GitHub: <a href="https://github.com/YOURGITHUBNAME1234">YOURGITHUBNAME1234</a></div> 
+            <div class="grid-item">{{text.FIRSTNAME_INFO}}: {{websiteData.FIRSTNAME}}</div>
+            <div class="grid-item">{{text.EMAIL_INFO}}: <a href="mailto:{{websiteData.MAILADRESS}}">{{websiteData.MAILADRESS}}</a></div>
+            <div class="grid-item">{{text.LASTNAME_INFO}}: {{websiteData.LASTNAME}}</div>
+            <div class="grid-item">GitHub: <a href="https://github.com/{{websiteData.GITHUBNAME}}">{{websiteData.GITHUBNAME}}</a></div> 
         </div>
     </div>
 
