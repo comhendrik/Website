@@ -45,6 +45,8 @@ docker run -dp 3000:3000 <imageName>
 ```
 Now open the website under http://127.0.0.1:3000/index<br/>
 
+A ready-to-use container is available on the Docker Hub (https://hub.docker.com/r/comhendrik/webpage/tags) <br>
+
 3. Option (Host Docker container on heroku)
 
 
