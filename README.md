@@ -60,11 +60,7 @@ and activate it with
 . <venvName>/bin/activate
 ```
 
-Now install gunicorn
-```
-pip install gunicorn
-```
-You also need a Procfile located in the root directory. I already added to the root directory so you don't need to create on your own.<br/>
+You need a Procfile located in the root directory. I already added it to the root directory so you don't need to create it on your own.<br/>
 Now run:
 ```
 git init
