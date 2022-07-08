@@ -81,12 +81,12 @@ You need to create a app with:
 ```
 heroku create <appname>
 ```
-(if you don't provide <appname>, heroku creates a random name.)<br/>
+(if you don't provide appname, heroku creates a random name.)<br/>
 To give heroku acces to your git repo run:
 ```
 heroku git:remote <appname>
 ```
-Now is the time to push your repo to heroku with(heroku will automatically build the application and you can visit it under https://<appname>.herokuapp.com/index):
+Now is the time to push your repo to heroku with(heroku will automatically build the application and you can visit it under https://appname.herokuapp.com/index):
 ```
 git push heroku master
 ```
