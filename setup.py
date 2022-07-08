@@ -1,11 +1,9 @@
 websiteData = {
-    'ADMINNAME' : 'admin',
-    'PASSWORD' : 'password',
-    'WEBSITENAME' : 'hendriksteen',
-    'FIRSTNAME' : 'Hendrik',
-    'LASTNAME' : 'Steen',
-    'INFORMATIONTEXT' : 'Ich programmiere aus Leidenschaft',
-    'MAILADRESS' : 'hendrik0807@icloud.com',
-    'GITHUBNAME' : 'comhendrik',
+    'WEBSITENAME' : 'websitename',
+    'FIRSTNAME' : 'firstname',
+    'LASTNAME' : 'lastname',
+    'INFORMATIONTEXT' : 'I program with passion',
+    'MAILADRESS' : 'test@icloud.com',
+    'GITHUBNAME' : 'yourgithubname',
     'PROFILEPICTUREPATH': 'static/images/placeholderImage.jpg'
     }
