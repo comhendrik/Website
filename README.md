@@ -1,9 +1,9 @@
-#personal Website
+#personal Website<br/>
 Description:<br/>
 Static website with the Flask Web Framework. You can customise it for yourself to show yourself and your work. It offers the opportunity to present projects, explain a curriculum vitae and let others know more about you with a short information headline and text.<br/>
 
 Why I have buil this project:<br/>
-I started this project to learn HTML, CSS, a little JS as well as the Python framework Flask to create a website for my project portfolio and resume.<br/>
+I started this project to learn HTML and CSS as well as the Python framework Flask to create a website for my project portfolio and resume.<br/>
 
 Download:<br/>
 Use this command in your directory to clone the project:
@@ -60,11 +60,7 @@ and activate it with
 . <venvName>/bin/activate
 ```
 
-Now install gunicorn
-```
-pip install gunicorn
-```
-You also need a Procfile located in the root directory. I already added to the root directory so you don't need to create on your own.<br/>
+You need a Procfile located in the root directory. I already added it to the root directory so you don't need to create it on your own.<br/>
 Now run:
 ```
 git init
@@ -81,16 +77,20 @@ You need to create a app with:
 ```
 heroku create <appname>
 ```
-(if you don't provide <appname>, heroku creates a random name.)<br/>
+(if you don't provide appname, heroku creates a random name.)<br/>
 To give heroku acces to your git repo run:
 ```
 heroku git:remote <appname>
 ```
-Now is the time to push your repo to heroku with(heroku will automatically build the application and you can visit it under https://<appname>.herokuapp.com/index):
+Now is the time to push your repo to heroku with(heroku will automatically build the application and you can visit it under https://appname.herokuapp.com/index):
 ```
 git push heroku master
 ```
-(master is the default name for your repository. If you decided to name it something else, use that name at this point.)
+(master is the default name for your repository. If you decided to name it something else, use that name at this point.)<br/>
+To add new data to your cv, blog, portfolio follow the setup instructions above and push a new commit to heroku.<br/>
+Future:<br>
+1. add a Database to create Blog entries.
+2. host the website as a docker container on heroku or other cloud providers
 
 
 
