@@ -86,7 +86,8 @@ Now is the time to push your repo to heroku with(heroku will automatically build
 ```
 git push heroku master
 ```
-(master is the default name for your repository. If you decided to name it something else, use that name at this point.)
+(master is the default name for your repository. If you decided to name it something else, use that name at this point.)<br/>
+To add new data to your cv, blog, portfolio follow the setup instructions above and push a new commit to heroku.
 
 
 
