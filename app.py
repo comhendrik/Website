@@ -3,6 +3,8 @@ import json
 
 from flask import * 
 
+import pymongo
+
 import json
 
 from setup import websiteData
@@ -16,6 +18,13 @@ application.config.from_mapping(
     SECRET_KEY='dev',
     UPLOAD_FOLDER = IMAGE_FOLDER
 )
+print(websiteData["MONGODBCONNECTION"])
+client = pymongo.MongoClient("mongodb://localhost:27017/")
+
+db = client["websiteDB"]
+
+blog = db["blog"]
+cv = db["cv"]
 
 #change language for your website
 TEXT = german
@@ -30,17 +39,11 @@ def direct_to_about():
 
 @application.route('/cv')
 def direct_to_cv():
-    f = open('data/cv.json')
-    data = json.load(f)
-    f.close()
-    return render_template("cv.html", cv_data = data, websiteData=websiteData, text=TEXT.cv)
+    return render_template("cv.html", cv_data = cv.find(), websiteData=websiteData, text=TEXT.cv)
 
 @application.route('/blog')
 def direct_to_blog():
-    f = open('data/blog.json')
-    data = json.load(f)
-    f.close()
-    return render_template("blog.html", article=data, websiteData=websiteData, text=TEXT.blog)
+    return render_template("blog.html", article=blog.find(), websiteData=websiteData, text=TEXT.blog)
 
 @application.route('/portfolio')
 def direct_to_portfolio():
@@ -58,3 +61,6 @@ def direct_to_blog_article(article_id):
     if len(output_dict) == 0:
         return render_template("404.html")
     return render_template("article.html", article=output_dict[0], websiteData=websiteData, text=TEXT.article)
+
+from admin import bp
+application.register_blueprint(bp)
