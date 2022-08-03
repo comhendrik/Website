@@ -1,0 +1,81 @@
+.section {
+    font-size: 3vw;
+    color: black;
+    text-decoration: none;
+    padding: 1vw;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 15px;
+    margin: 1vw;
+    display: table;
+    justify-content: left;
+}
+
+.material-icons.md-1 {
+    font-size: 3vw;
+    padding: 0.5vw;
+    border-radius: 10px;
+    margin-right: 0.5vw;
+}
+
+
+.cv-container {
+    margin: 5vw 5vw 0 5vw;
+}
+
+.cv-item {
+    padding: 0.75vw;
+}
+
+
+.cv-headline {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.cv-image{
+    width: 10vw;
+    height: 10vw;
+    margin-right: 2vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cvDot{
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  position: absolute;
+  background-color: black;
+}
+
+.material-icons.cv-top{
+    z-index: 1;
+    font-size: 7vw;
+    color: white;
+}
+
+.cv-headline p {
+    color: black;
+    font-size: 2vw;
+}
+
+.cv-time {
+    color: gray;
+}
+
+.cv-text {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 2vw;
+}
+
+.verticalStroke {
+    border-left: 1px solid black;
+    height: 20vw;
+    margin-left: 5vw; /* .cv-image width/2 */
+    margin-right: 6vw; /*sum of (.cv-image width / 2) and .cv-image margin-right */
+    margin-top: 1vw;
+}

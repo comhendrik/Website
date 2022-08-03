@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <link rel="stylesheet" href="../static/blog.css">
+    <div class="section"> <span class="material-icons md-1" style="color: orange; background-color: rgb(255,136,0,0.4);">article</span> {{text.HEADER}} </div>
+        
+    <div class="blog-container">
+
+        {% for entry in article %}
+
+        <div class="blog-item {{ loop.cycle('no-1', 'no-2', 'no-2', 'no-1') }}" style="background-color: rgb({{entry.r}},{{entry.g}},{{entry.b}}, 0.6);">
+            <div class="blog-headline">
+                <div class="blog-image">
+                    <span class="blogDot" style="background-color: rgb({{entry.r}},{{entry.g}},{{entry.b}});"></span>
+                    <span class="material-icons blog-top">{{entry.icon}}</span>
+                </div>
+                <p class="title">{{entry.title}}</p>
+            </div>
+            <p class="head">{{entry.head}} <a href="/{{entry.id}}">{{text.LINK}}</a></p>
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+{% endblock %}

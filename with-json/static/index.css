@@ -1,0 +1,86 @@
+.landingParent {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(16,115,248,0.6);
+    border-radius: 15px;
+    margin: 20px 1vw;
+}
+
+.headline {
+    color: black;
+    font-size: 4vw;
+    margin: 0;
+}
+
+.subheadline {
+    color: white;
+    font-size: 2vw;
+    margin: 0;
+}
+
+.landingChildren1 {
+    margin-left: 7vw;
+    margin-top: 10vw;
+}
+
+.profileImage {
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    width: 25vw;
+    height: auto;
+    border-radius: 15px;
+    margin-right: 7vw;
+}
+
+.about-link-paragraph {
+    padding: 1vw;
+    font-size: 2vw;
+    background-color: rgb(16,115,248);
+    border-radius: 15px;
+    margin-top: 2vw;
+    text-align: center;
+    width: 35%;
+}
+
+.about-link {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+.container {
+    width: auto;
+    height: 75vh;
+    background: blue;
+    margin: 20px 1vw 20px 1vw;
+}
+
+.grid-container {
+    margin: 2vh 1vw;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.grid-item {
+    margin: 2vw;
+}
+
+.item-header {
+    font-size: 3vw;
+}
+
+.item-text {
+    font-size: 2vw;
+    color: gray;
+}
+
+.section {
+    font-size: 2vw;
+    color: black;
+    text-decoration: none;
+    padding: 1vw;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 15px;
+}
+
+.material-icons.md-1 { font-size: 2vw; }

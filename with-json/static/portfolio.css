@@ -1,0 +1,97 @@
+.header-box {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(16,115,248);
+    padding-left: 10px;
+    padding-right: 3vw;
+    border-radius: 15px;
+    color: white;
+    margin: 20px 1vw;
+    height: 75px;
+    align-items: center;
+}
+
+.header-box a {
+    text-decoration: none;
+    color: white;
+}
+
+.section {
+    font-size: 3vw;
+    color: black;
+    text-decoration: none;
+    padding: 1vw;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 15px;
+    margin: 1vw;
+    display: table;
+    justify-content: left;
+}
+
+.material-icons.md-1 {
+    font-size: 3vw;
+    padding: 0.5vw;
+    border-radius: 10px;
+    margin-right: 0.5vw;
+}
+
+/* eventuell eine datei für die alle header. */
+
+
+/* I will use pf instead of portfolio to identify the classes*/
+
+.pf-container {
+    margin: 1vw;
+}
+
+.pf-item {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.img-container {
+    margin: 1vw;
+}
+
+.img-container img {
+    height: 30vw;
+    width: auto;
+    margin: 0.5vw;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 20px;
+}
+
+.pf-item {
+    margin: 2vw;
+}
+
+.pf-item-text {
+    margin-left: 5vw;
+    width: 20vw;
+}
+
+.item-text-header {
+    font-size: 2vw;
+    color: black;
+}
+
+.item-text-description {
+    font-size: 1vw;
+    color: gray;
+}
+
+.item-link {
+    font-size: 1.5vw;
+    color: black;
+    text-decoration: none;
+    padding: 0.5vw;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 15px;
+}
+
+.material-icons.md-2 { 
+    font-size: 1vw;
+    padding: 0.5vw;
+    border-radius: 10px;
+}
