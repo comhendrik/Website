@@ -1,0 +1,62 @@
+.page {
+    background-color: rgb(16,115,248,0.6);
+    border-radius: 15px;
+    margin: 1vw;
+}
+
+.landingParent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw 10%;
+}
+
+.landingChildren {
+    text-align: left;
+}
+
+.landingChildren p {
+    width: 50vw;
+    font-size: 2vw;
+    color: black;
+    margin: 3vw;
+}
+
+.landingChildren img {
+    width: 25vw;
+    height: auto;
+    border-radius: 15px;
+}
+
+.headline {
+    margin: 5%;
+    text-align: center;
+    color: black;
+    font-size: 3vw;
+}
+
+.grid-container {
+    justify-content: center;
+    margin: auto;
+    width: 50%;
+    padding: 2vw 5vw;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.grid-item {
+    white-space: nowrap;
+    margin: 15px 2vw;
+    font-size: 2vw;
+    text-align: left;
+    color: black;
+}
+
+.grid-item a {
+    color: black;
+    transition: all 0.3s ease 0s;
+}
+
+.grid-item a:hover {
+    color: gray;
+}

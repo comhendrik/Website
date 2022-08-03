@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<link rel="stylesheet" href="../static/index.css">
+
+    <div class="landingParent">
+        <div class="landingChildren1">
+            <p class="headline">{{text.HEADLINE}}</p>
+            <p class="headline">{{websiteData.FIRSTNAME}}</p>
+            <p class="subheadline">{{text.SUBHEADLINE}}</p>
+            <a href="about" class="about-link" ><p class="about-link-paragraph"> {{text.ABOUT}} </p></a>
+            
+        </div>
+        <img src="{{websiteData.PROFILEPICTUREPATH}}" alt="Profile image" class="profileImage">
+    </div>
+
+    <div class="grid-container">
+        <div class="grid-item">
+            <p class="item-header">{{text.PORTFOLIOHEADLINE}}</p>
+            <p class="item-text">{{text.PORTFOLIOSUBHEADLINE}}</p>
+            <a href="portfolio" class="section">
+                <span class="material-icons md-1" style="color: blue; background-color: rgb(0,0,255,0.4); padding: 0.5vw; border-radius: 10px;">folder</span> {{text.PORTFOLIOBUTTON}} <span style="color: gray;">></span>
+            </a>
+        </div>
+        <div class="grid-item">
+            <p class="item-header">{{text.CVHEADLINE}}</p>
+            <p class="item-text">{{text.CVSUBHEADLINE}}</p>
+            <a href="cv" class="section">
+                <span class="material-icons md-1" style="color: green; background-color: rgb(0,255,0,0.4); padding: 0.5vw; border-radius: 10px;">badge</span> {{text.CVBUTTON}} <span style="color: gray;">></span>
+            </a>
+        </div>
+        <div class="grid-item">
+            <p class="item-header">{{text.BLOGHEADLINE}}</p>
+            <p class="item-text">{{text.BLOGSUBHEADLINE}}</p>
+            <a href="blog" class="section">
+                <span class="material-icons md-1" style="color: orange; background-color: rgb(255,136,0,0.4); padding: 0.5vw; border-radius: 10px;">article</span> {{text.BLOGBUTTON}} <span style="color: gray;">></span>
+            </a>
+        </div>
+    </div>
+{% endblock %}

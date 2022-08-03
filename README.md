@@ -1,0 +1,1 @@
+Open one of the folder to see more information to your desired configuration.

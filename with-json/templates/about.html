@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <link rel="stylesheet" href="../static/about.css">
+    <div class="page">
+        <div class="landingParent">
+            <div class="landingChildren">
+                <img src="static/images/placeholderImage.jpg" alt="Profile image" class="dot">
+            </div>
+            <div class="landingChildren">
+                <p>{{text.HELLO}} {{websiteData.FIRSTNAME}},</p>
+                <p>{{websiteData.INFORMATIONTEXT}}</p>
+            </div>
+        </div>
+        <p class="headline">{{text.INFO}}</p>
+        <div class="grid-container">
+            <div class="grid-item">{{text.FIRSTNAME_INFO}}: {{websiteData.FIRSTNAME}}</div>
+            <div class="grid-item">{{text.EMAIL_INFO}}: <a href="mailto:{{websiteData.MAILADRESS}}">{{websiteData.MAILADRESS}}</a></div>
+            <div class="grid-item">{{text.LASTNAME_INFO}}: {{websiteData.LASTNAME}}</div>
+            <div class="grid-item">GitHub: <a href="https://github.com/{{websiteData.GITHUBNAME}}">{{websiteData.GITHUBNAME}}</a></div> 
+        </div>
+    </div>
+
+{% endblock %}
