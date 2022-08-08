@@ -18,7 +18,7 @@ def create_blog_entry():
         head = request.form.get('head') 
         body = request.form.get('body') 
         icon = request.form.get('icon') 
-        link = request.form.get('link') 
+        link = request.form.get('link')
         blog.insert_one({
             "title": f"{title}",
             "head": f"{head}",

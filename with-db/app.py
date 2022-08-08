@@ -3,6 +3,8 @@ import json
 
 from flask import * 
 
+from bson.objectid import ObjectId
+
 import pymongo
 
 import json
@@ -52,15 +54,13 @@ def direct_to_portfolio():
     f.close()
     return render_template("portfolio.html", portfolio_data = data, websiteData=websiteData, text=TEXT.portfolio)
 
-@application.route('/<int:article_id>')
-def direct_to_blog_article(article_id):
-    f = open('data/blog.json')
-    data = json.load(f)
-    f.close()
-    output_dict = [x for x in data if x['id'] == article_id]
-    if len(output_dict) == 0:
+@application.route('/blog/<string:_id>')
+def direct_to_blog_article(_id):
+    data = blog.find({'_id': ObjectId(_id)}).limit(1)
+    entry = list(data)
+    if len(entry) == 0:
         return render_template("404.html")
-    return render_template("article.html", article=output_dict[0], websiteData=websiteData, text=TEXT.article)
+    return render_template("article.html", article=entry[0], websiteData=websiteData, text=TEXT.article)
 
 from admin import bp
 application.register_blueprint(bp)
