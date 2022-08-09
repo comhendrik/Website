@@ -20,8 +20,7 @@ application.config.from_mapping(
     SECRET_KEY='dev',
     UPLOAD_FOLDER = IMAGE_FOLDER
 )
-print(websiteData["MONGODBCONNECTION"])
-client = pymongo.MongoClient("mongodb://localhost:27017/")
+client = pymongo.MongoClient(websiteData["MONGODBCONNECTION"])
 
 db = client["websiteDB"]
 

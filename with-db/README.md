@@ -16,13 +16,8 @@ or download it directly from Github and unzip it in your directory.<br/>
 
 Setup:<br/>
 1. create CV<br/>
-1.1 Go to /data/cv.json and create resume entries according to the instructions. Icons should always be an icon name from goole material icons https://fonts.google.com/icons?selected=Material+Icons.<br/>
 2. create Portfolio<br/>
-2.1 Go to /data/portfolio.json and create portfolio entries according to the instructions.<br/>
-2.2 If you want to use images, create a folder with the project name under /static/images and copy some images in the folder /static/images/<YourNewProject>. Now you can go to /data/portfolio.json and create a image Path in the images array.<br/>
 3. create Blog article<br/>
-3.1 Go to /data/blog.json and create blog articles according to the instructions. Icons should always be an icon name from goole material icons https://fonts.google.com/icons?selected=Material+Icons.<br/>
-3.2 The body property can be filled with normal HTML Code and your article will be rendered properly.<br/>
 4. choose Language<br/>
 4.1 Go to /app.py line 21 and give the TEXT variable a value. You can choose between German and English.<br/>
 5. set up Website<br/>
