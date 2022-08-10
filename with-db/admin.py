@@ -1,7 +1,7 @@
 from unicodedata import category
 from flask import Blueprint, render_template, request, redirect, url_for
 
-import gridfs, codecs
+from app import FS
 
 bp = Blueprint('admin', __name__)
 
@@ -15,11 +15,9 @@ blog = db["blog"]
 
 cv = db["cv"]
 
-images_connection = client["images"]
+portfolio = db["portfolio"]
 
-FS = gridfs.GridFS(images_connection)
-
-@bp.route('/create_blog_entry',methods=['GET','POST'])
+@bp.route('/blog',methods=['GET','POST'])
 def create_blog_entry():
     if request.method == 'POST':
         title = request.form.get('title')
@@ -40,7 +38,7 @@ def create_blog_entry():
         return redirect(url_for('direct_to_blog'))
     return render_template("create_blog_entry.html")
 
-@bp.route('/create_cv_entry',methods=['GET','POST'])
+@bp.route('/cv',methods=['GET','POST'])
 def create_cv_entry():
     if request.method == 'POST':
         category = request.form.get('category')
@@ -57,29 +55,30 @@ def create_cv_entry():
     return render_template("create_cv_entry.html")
 
 
-@bp.route("/test-upload", methods=["GET","POST"])
-def upload_image():
+@bp.route("/portfolio", methods=["GET","POST"])
+def create_portfolio_entry():
     if request.method == 'POST':
         # get current image file
-        img_file = request.files['img']
-        # get Content Type and File Name of current image
-        content_type = img_file.content_type
-        filename = img_file.filename
-        # save to GridFS my image
-        # fields <-- recive the id of just saved image
-        fields = FS.put(img_file, content_type=content_type, filename=filename)
-        print(fields)
-        return "Succesfully inserted"
-    return render_template("upload.html")
+        title = request.form.get('title')
+        description = request.form.get('description')
+        github_link = request.form.get('github_link')
+        img_list = request.files.getlist("img")
+        images = []
+        for img_file in img_list:
+            # get Content Type and File Name of current image
+            content_type = img_file.content_type
+            filename = img_file.filename
+            # save to GridFS my image
+            # fields <-- recive the id of just saved image
+            fields = FS.put(img_file, content_type=content_type, filename=filename)
+            images.append(fields)
+        
+        portfolio.insert_one({
+            "title": f"{title}",
+            "description": f"{description}",
+            "github_link": f"{github_link}",
+            "images" : images
+        })
 
-@bp.route("/test-image-query", methods=["GET"])
-def image_query():
-    images = images_connection["fs.files"]
-    img_cursor = images.find()
-    images_for_webpage = []
-    for item in img_cursor:
-        image = FS.get(item["_id"])
-        base64_data = codecs.encode(image.read(), 'base64')
-        image = base64_data.decode('utf-8')
-        images_for_webpage.append(image)
-    return render_template("images.html", images=images_for_webpage)
+        return redirect(url_for("direct_to_portfolio"))
+    return render_template("create_portfolio_entry.html")

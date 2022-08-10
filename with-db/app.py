@@ -1,3 +1,4 @@
+from datetime import date
 import os
 import json
 
@@ -13,6 +14,8 @@ from setup import websiteData
 
 from Language import german, english
 
+import gridfs, codecs
+
 # create and configure the app
 IMAGE_FOLDER = os.path.join('static', 'images')
 application = Flask(__name__, instance_relative_config=True, template_folder='templates', static_folder='static')
@@ -26,6 +29,11 @@ db = client["websiteDB"]
 
 blog = db["blog"]
 cv = db["cv"]
+portfolio = db["portfolio"]
+
+images_connection = client["images"]
+
+FS = gridfs.GridFS(images_connection)
 
 #change language for your website
 TEXT = german
@@ -48,9 +56,21 @@ def direct_to_blog():
 
 @application.route('/portfolio')
 def direct_to_portfolio():
-    f = open('data/portfolio.json')
-    data = json.load(f)
-    f.close()
+    data = []
+    projects = portfolio.find()
+    for project in projects:
+        object = {
+            "title" : project["title"],
+            "description" : project["description"],
+            "github_link" : project["github_link"],
+            "images" : []
+        }
+        for img in project["images"]:
+            image = FS.get(img)
+            base64_data = codecs.encode(image.read(), 'base64')
+            image = base64_data.decode('utf-8')
+            object["images"].append(image)
+        data.append(object)
     return render_template("portfolio.html", portfolio_data = data, websiteData=websiteData, text=TEXT.portfolio)
 
 @application.route('/blog/<string:_id>')
@@ -62,4 +82,4 @@ def direct_to_blog_article(_id):
     return render_template("article.html", article=entry[0], websiteData=websiteData, text=TEXT.article)
 
 from admin import bp
-application.register_blueprint(bp)
+application.register_blueprint(bp, url_prefix="/admin")
