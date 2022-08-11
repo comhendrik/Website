@@ -1,8 +1,18 @@
+{% for message in get_flashed_messages() %}
+    <p>{{message}}</p>
+{% endfor %}
 <form method="POST">
     <input type="text" name="title" placeholder="title"><br>
     <input type="text" name="head" placeholder="simple description"><br>
     <input type="text" name="body" placeholder="body"><br>
     <input type="text" name="icon" placeholder="googleicon"><br>
     <input type="text" name="link" placeholder="Link to to website"><br>
+    <label>Color for blog entry</label><br>
+    <input type="text" name="r" placeholder="r"><br>
+    <input type="text" name="g" placeholder="g"><br>
+    <input type="text" name="b" placeholder="b"><br>
+    <label>Submit your admin credentials</label><br>
+    <input type="text" name="user" placeholder="username"><br>
+    <input type="text" name="password" placeholder="password"><br>
     <input type="submit" value="Submit">
 </form>
