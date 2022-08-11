@@ -20,9 +20,9 @@ In advance: I decided not to explain in detail how to use it without authenticat
 1.1 Install MongoDB on your system. https://www.mongodb.com/docs/manual/installation/ <br/>
 1.2 I found MongoDB Compass very helpful but it is not necassary. https://www.mongodb.com/try/download/compass <br/>
 1.3 Decide wether you want to use authentication or not. If you want to use it, I can recommend this tutorial. https://blog.tericcabrel.com/enable-authentication-and-authorization-on-mongodb/ (Note the version you are using. I used a Mac with M1 and started the mongo shell with ```mongosh``` instead of ```mongo``` ) <br/>
-1.4 Optional if you don't want to use authentication: Change the lines containing ```pymongo.MongoClient(authenticate(user, password))``` to ```pymongo.MongoClient("YOURNORMALURI")``` and change the forms in create_blog_entry.html, create_portfolio_entry.html and create_cv_entry.html and the functions in admin.py and change the URI in setup.py to a normal one so that no authentication is used.<br/>
-1.4. Paste in your URI for MongoDB with a reading only User in setup.py <br/>
-1.5 Configure the authenticate() function in admin.py how you want it to be. <br/>
+1.4 (Optional) if you don't want to use authentication: Change the lines containing ```pymongo.MongoClient(authenticate(user, password))``` to ```pymongo.MongoClient("YOURNORMALURI")``` and change the forms in create_blog_entry.html, create_portfolio_entry.html and create_cv_entry.html and the functions in admin.py and change the URI in setup.py to a normal one so that no authentication is used.<br/>
+1.4. (Optional) if you want to use authentication: Paste in your URI for MongoDB with a reading only User in setup.py <br/>
+1.5 Configure the authenticate() function in admin.py how you want it to be. When you don't use authentication you can delete it.<br/>
 2. Create <br/>
 2.1 The admin credentials you need to provide are the ones you specify when you create an admin user. See 1.3<br/>
 2.2 When your website is up and running visit for CV http://127.0.0.1:3000/admin/cv to create a new article.<br/>
