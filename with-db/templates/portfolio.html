@@ -7,8 +7,6 @@
     <div class="pf-container">
         {% for item in portfolio_data %}
             <div class="pf-item">
-
-                
                 {% if loop.index is divisibleby 2  %}
 
                     <div class="pf-item-text">
@@ -21,7 +19,7 @@
 
                     <div class="img-container">
                         {% for img in item.images %}
-                        <img src="{{img.path}}" alt="placeholderImage">
+                        <img src="data:image/jpeg;base64, {{img}}" alt="image for project">
                         {% endfor %}
                     </div>
 
@@ -29,7 +27,7 @@
 
                     <div class="img-container">
                         {% for img in item.images %}
-                        <img src="{{img.path}}" alt="placeholderImage">
+                        <img src="data:image/jpeg;base64, {{img}}" alt="image for project">
                         {% endfor %}
                     </div>
 

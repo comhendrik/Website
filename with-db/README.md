@@ -15,19 +15,26 @@ git clone https://github.com/comhendrik/personalWebsite.git
 or download it directly from Github and unzip it in your directory.<br/>
 
 Setup:<br/>
-1. create CV<br/>
-1.1 Go to /data/cv.json and create resume entries according to the instructions. Icons should always be an icon name from goole material icons https://fonts.google.com/icons?selected=Material+Icons.<br/>
-2. create Portfolio<br/>
-2.1 Go to /data/portfolio.json and create portfolio entries according to the instructions.<br/>
-2.2 If you want to use images, create a folder with the project name under /static/images and copy some images in the folder /static/images/<YourNewProject>. Now you can go to /data/portfolio.json and create a image Path in the images array.<br/>
-3. create Blog article<br/>
-3.1 Go to /data/blog.json and create blog articles according to the instructions. Icons should always be an icon name from goole material icons https://fonts.google.com/icons?selected=Material+Icons.<br/>
-3.2 The body property can be filled with normal HTML Code and your article will be rendered properly.<br/>
-4. choose Language<br/>
-4.1 Go to /app.py line 21 and give the TEXT variable a value. You can choose between German and English.<br/>
-5. set up Website<br/>
-5.1 Go to /setup.py and fill the propertys with desired values.<br/>
+In advance: I decided not to explain in detail how to use it without authentication because I think authentication should be used with MongoDB in this project.
+1. Download MongoDB<br/>
+1.1 Install MongoDB on your system. https://www.mongodb.com/docs/manual/installation/ <br/>
+1.2 I found MongoDB Compass very helpful but it is not necassary. https://www.mongodb.com/try/download/compass <br/>
+1.3 Decide wether you want to use authentication or not. If you want to use it, I can recommend this tutorial. https://blog.tericcabrel.com/enable-authentication-and-authorization-on-mongodb/ (Note the version you are using. I used a Mac with M1 and started the mongo shell with ```mongosh``` instead of ```mongo``` ) <br/>
+1.4 (Optional) if you don't want to use authentication: Change the lines containing ```pymongo.MongoClient(authenticate(user, password))``` to ```pymongo.MongoClient("YOURNORMALURI")``` and change the forms in create_blog_entry.html, create_portfolio_entry.html and create_cv_entry.html and the functions in admin.py and change the URI in setup.py to a normal one so that no authentication is used.<br/>
+1.4. (Optional) if you want to use authentication: Paste in your URI for MongoDB with a reading only User in setup.py <br/>
+1.5 Configure the authenticate() function in admin.py how you want it to be. When you don't use authentication you can delete it.<br/>
+2. Create <br/>
+2.1 The admin credentials you need to provide are the ones you specify when you create an admin user. See 1.3<br/>
+2.2 When your website is up and running visit for CV http://127.0.0.1:3000/admin/cv to create a new article.<br/>
+2.3 When your website is up and running visit for Portfolio http://127.0.0.1:3000/admin/portfolio to create a new article.<br/>
+2.4 When your website is up and running visit for Blog articles http://127.0.0.1:3000/admin/blog to create a new article.<br/>
+3. choose Language<br/>
+3.1 Go to /app.py line 21 and give the TEXT variable a value. You can choose between German and English.<br/>
+4. set up Website<br/>
+4.1 Go to /setup.py and fill the propertys with desired values.<br/>
 
+
+<b>This section is not finished</b>:
 Run:
 1. Option (Locally):
 Create a terminal window and run the following commands
@@ -89,10 +96,6 @@ Now is the time to push your repo to heroku with(heroku will automatically build
 git push heroku master
 ```
 (master is the default name for your repository. If you decided to name it something else, use that name at this point.)<br/>
-To add new data to your cv, blog, portfolio follow the setup instructions above and push a new commit to heroku.<br/>
-Future:<br>
-1. add a Database to create Blog entries.
-2. host the website as a docker container on heroku or other cloud providers
 
 
 
