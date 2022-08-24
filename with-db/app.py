@@ -1,6 +1,4 @@
-from datetime import date
 import os
-import json
 
 from flask import * 
 
@@ -8,11 +6,9 @@ from bson.objectid import ObjectId
 
 import pymongo
 
-import json
-
 from setup import websiteData
 
-from Language import german, english
+from Language import german
 
 import gridfs, codecs
 
@@ -81,5 +77,8 @@ def direct_to_blog_article(_id):
         return render_template("404.html")
     return render_template("article.html", article=entry[0], websiteData=websiteData, text=TEXT.article)
 
-from admin import bp
-application.register_blueprint(bp, url_prefix="/admin")
+from create import create_bp
+application.register_blueprint(create_bp, url_prefix="/create")
+
+from delete import delete_bp
+application.register_blueprint(delete_bp, url_prefix="/delete")
