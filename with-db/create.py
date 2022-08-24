@@ -2,11 +2,11 @@ from flask import Blueprint, render_template, request, redirect, url_for, flash
 
 import gridfs
 
-bp = Blueprint('admin', __name__)
+create_bp = Blueprint('create', __name__)
 
 import pymongo
 
-@bp.route('/blog',methods=['GET','POST'])
+@create_bp.route('/blog',methods=['GET','POST'])
 def create_blog_entry():
     if request.method == 'POST':
         user = request.form.get('user')
@@ -39,7 +39,7 @@ def create_blog_entry():
         return redirect(url_for('direct_to_blog'))
     return render_template("create_blog_entry.html")
 
-@bp.route('/cv',methods=['GET','POST'])
+@create_bp.route('/cv',methods=['GET','POST'])
 def create_cv_entry():
     if request.method == 'POST':
         user = request.form.get('user')
@@ -66,7 +66,7 @@ def create_cv_entry():
     return render_template("create_cv_entry.html")
 
 
-@bp.route("/portfolio", methods=["GET","POST"])
+@create_bp.route("/portfolio", methods=["GET","POST"])
 def create_portfolio_entry():
     if request.method == 'POST':
         user = request.form.get('user')
