@@ -84,13 +84,10 @@ def create_portfolio_entry():
         FS = gridfs.GridFS(images_connection)
         try:
             for img_file in img_list:
-                # get Content Type and File Name of current image
                 content_type = img_file.content_type
                 filename = img_file.filename
-                # save to GridFS my image
-                # fields <-- recive the id of just saved image
-                fields = FS.put(img_file, content_type=content_type, filename=filename)
-                images.append(fields)
+                _id = FS.put(img_file, content_type=content_type, filename=filename)
+                images.append(_id)
         
             portfolio.insert_one({
                 "title": f"{title}",

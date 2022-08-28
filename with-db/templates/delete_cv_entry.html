@@ -1,11 +1,12 @@
-<h1>Choose ID to delete blog entry</h1>
+<h1>Choose ID to delete cv entry</h1>
 {% for message in get_flashed_messages() %}
     <p>{{message}}</p>
 {% endfor %}
 {% for item in articles%}
     <div style="border: 2px solid black; margin: 5px;">
         <p>{{item._id}}</p>
-        <p>{{item.title}}</p>
+        <p>{{item.category}}</p>
+        <p>{{item.description}}</p>
     </div>
 {% endfor %}
 <form method="POST">
