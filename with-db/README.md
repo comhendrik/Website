@@ -1,10 +1,3 @@
-Download:<br/>
-Use this command in your directory to clone the project:
-```
-git clone https://github.com/comhendrik/personalWebsite.git
-```
-or download it directly from Github and unzip it in your directory.<br/>
-
 Setup:<br/>
 In advance: I decided not to explain in detail how to use it without authentication because I think authentication should be used with MongoDB in this project.
 1. Download MongoDB<br/>
