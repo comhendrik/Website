@@ -14,7 +14,6 @@ git clone https://github.com/comhendrik/personalWebsite.git
 or download it directly from Github and unzip it in your directory.<br/>
 
 Images:<br/>
-Images:<br/>
 <p float="left">
 <img src="/ExampleImages/Home.png" width="250" height="auto">
 <img src="/ExampleImages/Navigation.png" width="250" height="auto">
